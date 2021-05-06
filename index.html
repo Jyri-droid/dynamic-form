@@ -2,14 +2,44 @@
 <html>
 
 <head>
-	<title>Animated dots</title>
+	<title>A dynamic form that saves input values into a 3d array</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<button onclick="shuffleDots()">Shuffle dots</button>
-	<div id="container" class="container"></div>
+<h2>Enter participants</h2>
 
-	<script src="scripts.js"></script>
+<div id="formField">
+	<form class="column" onsubmit="return false" autocomplete="on">
+			<div class="row">
+				<label for="firstName">First name</label><br>
+				<input type="text" name="firstName" id="firstName" placeholder="Enter first name here" onkeydown="addInputByEnterKey(this)" />
+			</div>
+			<div class="row">
+				<label for="familyName">Family name</label><br>
+				<input type="text" name="familyName" id="familyName" placeholder="Enter family name here" onkeydown="addInputByEnterKey(this)" />
+			</div>
+			<div class="rowEnd" hidden>
+				<label for="deletePerson"></label><br>
+				<input class="material-icons" name="deletePerson" type="button" id="deletePerson" value="delete" onclick="deleteForm(this.parentElement)">
+			</div>
+	</form>
+</div>
+
+<div class="column">
+	<label for="addPerson"></label><br>
+	<input class="button" type="button" value="Add new participant" id="addPerson" onclick="addForm()"/>
+</div>
+
+<div class="column">
+	<label for="saveData"></label><br>
+	<input class="button" type="button" value="Save participants" id="saveData" onclick="saveData()"/>
+</div>
+
+<p id="savedData" hidden></p>
+
+<script src="scripts.js"></script>
+
 </body>
 </html>
