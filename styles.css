@@ -51,7 +51,7 @@ input {
 
 input:focus {
 	outline: none;
-	border: 4px solid lightskyblue;
+	border: 4px solid dodgerBlue;
 }
 
 input.button {
@@ -59,9 +59,13 @@ input.button {
 	border: none;
 }
 
-input.button:hover, input.button:focus {
+input.button:hover {
 	background-color: navy;
 	color: white;
+}
+
+input.button:focus, input.button.material-icons:focus {
+	border: 4px solid dodgerBlue;
 }
 
 .material-icons {
@@ -72,7 +76,7 @@ input.button:hover, input.button:focus {
 	padding: 0;
 }
 
-.material-icons:hover, .material-icons:focus {
+button.material-icons:hover {
 	color: navy;
 	border: none;
 }
