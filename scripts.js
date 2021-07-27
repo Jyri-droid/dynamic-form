@@ -1,3 +1,5 @@
+// JavaScript for dynamic and accessible form
+
 function validateInput(input) {
 	if (input.value == "") {
 	  alert("Please fill in this input");
